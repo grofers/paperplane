@@ -1,5 +1,8 @@
 {
-    "name"      : "paperplane",
-    "version"   : "0.0.1",
-    "main"      : "main.js"
+  "name": "paperplane",
+  "version": "0.0.1",
+  "main": "main.js",
+  "dependencies": {
+    "node-gcm": "^0.12.0"
+  }
 }
