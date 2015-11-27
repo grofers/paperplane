@@ -3,28 +3,53 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
-    <style type="text/css" media="screen">
-      #editor {
-        margin-left: auto;
-        margin-right: auto;
-      }
-    </style>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flat-ui.min.css">
+    <link rel="stylesheet" href="css/main.css">
 
   </head>
   <body>
-    <div id="auth">
-      <label for="auth-key">Auth key:</label><input type="text" id="auth-key" size="15"></input>
+    <div class="window">
+
+      <div class="header container-fluid">
+        <div class="row">
+          <h1>Paperplane</h1>
+        </div>
+      </div>
+
+      <form class="main container-fluid">
+        <div class="row">
+          <div id="auth" class="input-group">
+            <input type="text" id="auth-key" class="form-control" placeholder="GCM Auth Key">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button"><span class="fui-star-2"></span> Save</button>
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div id="reg-id" class="form-group">
+            <input type="text" id="registration-id" class="form-control" placeholder="Registration ID">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label>Notification Body</label>
+            <div id="editor">{
+
+}</div>
+          </div>
+          <button type="button" id="send" class="btn btn-embossed btn-primary pull-right" onclick="sendNotification()">
+            <span class="fui-star-2"></span> Send
+          </button>
+        </div>
+      </form>
+
     </div>
-    <div id="reg-id">
-      <label for="registration-id">Registration ID:</label><input type="text" id="registration-id" size="60"></input>
-    </div>
-    <div id="editor">function foo(items) {
-    var x = "All this is syntax highlighted";
-    return x;
-    }</div>
+
     <script src="./js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="./js/sendNotif.js" type="text/javascript" charset="utf-8"></script>
-    <input type="button" id="send" onclick="sendNotification()" value="Send"></input>
     <script>
       var editor = ace.edit("editor");
       editor.setTheme("ace/theme/twilight");

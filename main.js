@@ -14,9 +14,8 @@ app.on('window-all-closed', () => {
 });
 
 app.on('ready', () => {
-  let mainWindow = new BrowserWindow({ width: 800, height: 600 });
+  let mainWindow = new BrowserWindow({ frame: false, transparent: true });
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
-  mainWindow.openDevTools();
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
