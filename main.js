@@ -8,13 +8,11 @@ require('crash-reporter').start();
 let mainWindow = null;
 
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
     app.quit();
-  }
 });
 
 app.on('ready', () => {
-  let mainWindow = new BrowserWindow({ frame: false, transparent: true });
+  let mainWindow = new BrowserWindow({height:620, width: 810});
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
   mainWindow.on('closed', () => {
     mainWindow = null;
