@@ -2,13 +2,11 @@
   "name": "paperplane",
   "version": "0.0.1",
   "main": "main.js",
+  "author": "vishesh92, cdax",
   "scripts": {
-    "start": "electron app"
+    "start": "electron ."
   },
   "dependencies": {
     "node-gcm": "^0.12.0"
-  },
-  "devDependencies": {
-    "electron-prebuilt": "^0.36.0"
   }
 }

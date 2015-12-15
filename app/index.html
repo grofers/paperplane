@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Paperplane</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -52,12 +52,12 @@
     <script src="./js/sendNotif.js" type="text/javascript" charset="utf-8"></script>
     <script>
       var editor = ace.edit("editor");
-      editor.setTheme("ace/theme/twilight");
+      editor.setTheme("ace/theme/terminal");//twilight");
       editor.setOptions({
         maxLines: 20,
         minLines: 15
       });
-      editor.getSession().setMode("ace/mode/javascript");
+      editor.getSession().setMode("ace/mode/jsoniq");
     </script>
   </body>
 </html>

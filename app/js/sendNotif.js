@@ -2,8 +2,8 @@
 var gcm = require('node-gcm');
 
 var sendNotification = function () {
-        var registrationID = this.window.document.getElementById('registration-id').value,
-            authKey = this.window.document.getElementById('auth-key').value,
+        var registrationID = window.document.getElementById('registration-id').value,
+            authKey = window.document.getElementById('auth-key').value,
             message = editor.getValue();
         try {
             message = JSON.parse(message);
