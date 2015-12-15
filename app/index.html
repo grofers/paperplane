@@ -12,20 +12,15 @@
   </head>
   <body>
     <div class="window">
-
       <div class="header container-fluid">
         <div class="row">
-          <h1>Paperplane</h1>
+          <h2>Paper Plane<img title="Paper Plane" src='img/icon.png' height="100px"/></h2>
         </div>
       </div>
-
       <form class="main container-fluid">
         <div class="row">
-          <div id="auth" class="input-group">
+          <div id="auth" class="form-group">
             <input type="text" id="auth-key" class="form-control" placeholder="GCM Auth Key">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button"><span class="fui-star-2"></span> Save</button>
-            </span>
           </div>
         </div>
         <div class="row">
@@ -51,8 +46,17 @@
     <script src="./js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="./js/sendNotif.js" type="text/javascript" charset="utf-8"></script>
     <script>
+      if (localStorage.authKey) {
+        document.getElementById('auth-key').value = localStorage.authKey;
+      }
+      if (localStorage.registrationID) {
+        document.getElementById('registration-id').value = localStorage.registrationID;
+      }
+      if (localStorage.notification) {
+        document.getElementById('editor').value = localStorage.notification;
+      }
       var editor = ace.edit("editor");
-      editor.setTheme("ace/theme/terminal");//twilight");
+      editor.setTheme("ace/theme/terminal");
       editor.setOptions({
         maxLines: 20,
         minLines: 15
