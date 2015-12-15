@@ -12,8 +12,8 @@ app.on('window-all-closed', () => {
 });
 
 app.on('ready', () => {
-  let mainWindow = new BrowserWindow({height:620, width: 810});
-  mainWindow.loadUrl('file://' + __dirname + '/index.html');
+  let mainWindow = new BrowserWindow({height:700, width: 800, icon:'img/icon.png'});
+  mainWindow.loadURL('file://' + __dirname + '/index.html');
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
