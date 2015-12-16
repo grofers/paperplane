@@ -5,6 +5,9 @@ var sendNotification = function () {
         var registrationID = window.document.getElementById('registration-id').value,
             authKey = window.document.getElementById('auth-key').value,
             message = editor.getValue();
+        localStorage.registrationID = registrationID;
+        localStorage.authKey = authKey;
+        localStorage.notification = message;
         try {
             message = JSON.parse(message);
         } catch (e) {
