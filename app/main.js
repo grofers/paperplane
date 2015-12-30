@@ -8,7 +8,7 @@ require('crash-reporter').start();
 let mainWindow = null;
 
 app.on('window-all-closed', () => {
-    app.quit();
+  app.quit();
 });
 
 app.on('ready', () => {

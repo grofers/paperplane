@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Paperplane</title>
+    <title>Paper Plane</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -46,22 +46,23 @@
     <script src="./js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="./js/sendNotif.js" type="text/javascript" charset="utf-8"></script>
     <script>
+      var editor = ace.edit("editor");
       if (localStorage.authKey) {
         document.getElementById('auth-key').value = localStorage.authKey;
       }
       if (localStorage.registrationID) {
-        document.getElementById('registration-id').value = localStorage.registrationID;
+        document.getElementById('registration-id').value = localStorage.registrationIDs;
       }
       if (localStorage.notification) {
-        document.getElementById('editor').value = localStorage.notification;
+        editor.$blockScrolling = Infinity;
+        editor.setValue(localStorage.notification);
       }
-      var editor = ace.edit("editor");
       editor.setTheme("ace/theme/terminal");
       editor.setOptions({
         maxLines: 20,
         minLines: 15
       });
-      editor.getSession().setMode("ace/mode/jsoniq");
+      editor.getSession().setMode("ace/mode/json");
     </script>
   </body>
 </html>

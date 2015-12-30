@@ -1,7 +1,7 @@
 ![Paper Plane](app/img/logo.png)
 
 **Paper Plane** is an electron app to send GCM notifications. You can use this to test notifications on GCM.
-To send a notification you need GCM auth key, GCM token/registration id and notification.
+To send a notification you need GCM auth key, GCM token/registration id and notification. You can send notification to multiple ids by inserting them in a comma separated format.
 
 ![Screenshot](app/img/screenshot.png)
 
