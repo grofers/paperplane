@@ -1,0 +1,57 @@
+.main {
+  padding: 1em;
+}
+
+.off-canvas-wrapper {
+  background-color: white;
+  color: black;
+}
+
+.off-canvas-content {
+  background-color: black;
+  color: white;
+}
+
+sup {
+  padding-left: .3em;
+  color: #757575;
+}
+
+.menu-toggle {
+  background-color: transparent;
+  font-size: 2em;
+  position: fixed;
+  color: #BDBDBD;
+
+  &:hover, &:active, &:focus {
+      background-color: transparent;
+      color: white;
+  }
+}
+
+input.gcm-auth-key,
+input.gcm-reg-id {
+  font-family: 'Inconsolata', sans-serif;
+}
+
+.message-actions {
+  margin-top: 1em;
+}
+
+.msg-editor-wrapper {
+  padding-top: .3em;
+  padding-left: .6em;
+  padding-right: .6em;
+  background-color: #212121;
+  border-radius: 4px;
+}
+
+.editor-label {
+  color: white;
+  font-size: 1em;
+  padding-bottom: .3em;
+  sup {
+    padding-left: .3em;
+    color: #BDBDBD;
+  }
+}

@@ -1,0 +1,30 @@
+<form class="main container-fluid">
+  <div class="row">
+    <div class="input-group">
+      <span class="input-group-label">GCM&nbsp;API&nbsp;Key<sup class="help"><span data-tooltip aria-haspopup="true" class="has-tip top" data-disable-hover="false" tabindex=2 title="An API key saved on the app server that gives the app server authorized access to Google services. You obtain the API key when you configure your API project."><i class="fa fa-question"></i></span></sup></span>
+      <input id="input-api-key" class="input-group-field gcm-auth-key" type="text">
+      <div class="input-group-button">
+        <input type="submit" class="button" value="Save">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-group">
+      <span class="input-group-label">Registration&nbsp;ID<sup class="help"><span data-tooltip aria-haspopup="true" class="has-tip top" data-disable-hover="false" tabindex=2 title="An ID issued by the GCM connection servers to the client app that allows it to receive messages."><i class="fa fa-question"></i></span></sup></span>
+      <input id="input-reg-id" class="input-group-field gcm-reg-id" type="text">
+      <div class="input-group-button">
+        <input type="submit" class="button" value="Save">
+      </div>
+    </div>
+  </div>
+  <div class="row msg-editor-wrapper">
+    <div class="input-group">
+      <label class="editor-label">Message<sup class="help"><span data-tooltip aria-haspopup="true" class="has-tip top" data-disable-hover="false" tabindex=2 title="The JSON object that you wish to push to the device as a notification."><i class="fa fa-question"></i></span></sup></label>
+      <div id="editor">{ "key": "value" }</div>
+    </div>
+    <div class="message-actions clearfix">
+      <button class="button float-left">Save</button>
+      <button id="send" class="alert button float-right" onclick="sendNotification()"><i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+    </div>
+  </div>
+</form>

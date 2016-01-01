@@ -1,0 +1,73 @@
+.sidebar-wrapper {
+  background-color: #212121;
+
+  .app-header-wrapper {
+
+    padding: 2em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .app-title-wrapper {
+
+      padding-left: 1em;
+
+      .app-title {
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+      .app-subtitle {
+        font-size: .9em;
+      }
+
+      .app-title, .app-subtitle {
+        margin: 0;
+        padding: 0;
+
+      }
+    }
+  }
+
+  ul.sidebar {
+    color: #BDBDBD;
+    &>li {
+      &>a {
+        font-size: 0.9em;
+        font-weight: 700;
+        color: #BDBDBD;
+        text-transform: uppercase;
+
+        &::after {
+          color: #BDBDBD;
+        }
+      }
+
+      ul.nested.menu {
+        &>li {
+          font-size: 1em;
+          &>.saved {
+            display: flex;
+            flex-direction: row;
+            padding-left: 1em;
+            padding-top: .3em;
+            padding-bottom: .3em;
+            a {
+              color: #FAFAFA;
+              &:hover, &:active, &:focus {
+                color: white;
+              }
+            }
+            .name {
+              margin-right: .5em;
+            }
+            .btn-delete {
+              margin-right: .5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
